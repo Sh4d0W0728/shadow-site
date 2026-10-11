@@ -40,6 +40,21 @@ npm run build
 npm run start -- -p 4317
 ```
 
+## 部署到 GitHub Pages
+
+仓库自带 `.github/workflows/deploy-pages.yml`：每次推送到 `main`，GitHub Actions 会静态导出网页并发布到 GitHub Pages。
+
+1. 把本仓库推送到你的 GitHub。
+2. 在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
+3. 推送一次（或在 Actions 页手动运行 “Deploy to GitHub Pages”）。完成后网址是 `https://<用户名>.github.io/<仓库名>/`；如果仓库名就是 `<用户名>.github.io`，网址是 `https://<用户名>.github.io/`。
+
+子路径由 `actions/configure-pages` 自动识别，无需手动配置。想在本地预览静态导出版本：
+
+```bash
+GITHUB_PAGES=true PAGES_BASE_PATH= npm run build   # 产物在 out/
+npx serve out
+```
+
 ## 修改文案
 
 所有文案与数据集中在 `src/lib/content.ts`（版本号、下载链接、阶段、领域、演示会话、原则等）。各段落组件位于 `src/components/site/`。
