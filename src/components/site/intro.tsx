@@ -32,7 +32,7 @@ export function Intro() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] cursor-pointer"
+      className="intro-failsafe fixed inset-0 z-[100] cursor-pointer"
       onClick={() => setPhase("done")}
       role="presentation"
     >
