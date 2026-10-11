@@ -39,25 +39,25 @@ const clips = [
 
 function rand(seed: number) {
   const x = Math.sin(seed * 9301 + 49297) * 233280
-  return x - Math.floor(x)
+  return Math.round((x - Math.floor(x)) * 1000) / 1000
 }
 
 const COL_W = 17.6
-const CARD_H = 14.4
+const CARD_H = 16.6
 
 const layout = clips.map((c, i) => {
   const row = clips.slice(0, i).filter((x) => x.col === c.col).length
-  const sx = 2 + rand(i + 1) * 78
-  const sy = 4 + rand(i + 31) * 66
+  const sx = Math.round((2 + rand(i + 1) * 78) * 10) / 10
+  const sy = Math.round((4 + rand(i + 31) * 70) * 10) / 10
   return {
     ...c,
     kind: columns[c.col].kind,
     sx,
     sy,
-    rot: (rand(i + 77) - 0.5) * 34,
-    tx: 1.6 + c.col * 19.6,
-    ty: 17 + row * 18.5,
-    scanAt: 0.14 + 0.34 * ((sy + CARD_H / 2) / 85),
+    rot: Math.round((rand(i + 77) - 0.5) * 340) / 10,
+    tx: Math.round((1.6 + c.col * 19.6) * 10) / 10,
+    ty: 14 + row * 20,
+    scanAt: 0.14 + 0.34 * ((sy + CARD_H / 2) / 88),
     moveStart: 0.52 + c.col * 0.035 + row * 0.018,
   }
 })
@@ -114,7 +114,7 @@ function ColumnHeaders({ p }: { p: MotionValue<number> }) {
       {columns.map((c, i) => (
         <motion.div
           key={c.name}
-          style={{ opacity, left: `${1.6 + i * 19.6}%`, width: `${COL_W}%` }}
+          style={{ opacity, left: `${(1.6 + i * 19.6).toFixed(1)}%`, width: `${COL_W}%` }}
           className="absolute top-[5%] flex items-center gap-1 border-b border-white/10 pb-1 font-mono text-[9px] text-cream/80 sm:gap-1.5 sm:text-[11px]"
         >
           <span className={cn("size-1.5 shrink-0 rounded-sm", i === 4 ? "bg-dim" : "bg-violet")} />
@@ -125,13 +125,22 @@ function ColumnHeaders({ p }: { p: MotionValue<number> }) {
       {columns.map((c, i) => (
         <motion.div
           key={`f-${c.name}`}
-          style={{ opacity: footer, left: `${1.6 + i * 19.6}%`, width: `${COL_W}%` }}
-          className="absolute top-[74%] font-mono text-[8px] text-lime sm:text-[10px]"
+          style={{ opacity: footer, left: `${(1.6 + i * 19.6).toFixed(1)}%`, width: `${COL_W}%` }}
+          className="absolute top-[76%] font-mono text-[8px] text-lime sm:text-[10px]"
         >
           ✓ sha256
-          <span className="hidden text-dim sm:inline"> · 3 / 3</span>
+          <span className="hidden text-dim sm:inline"> · {clips.filter((c) => c.col === i).length} / {clips.filter((c) => c.col === i).length}</span>
         </motion.div>
       ))}
+      <motion.div
+        style={{ opacity: footer }}
+        className="absolute top-[86%] left-[1.6%] right-[1.6%] flex items-center justify-between border-t border-white/10 pt-2 font-mono text-[8px] text-dim sm:text-[10px]"
+      >
+        <span>
+          <span className="text-lime">{clips.length} / {clips.length}</span> copied · 0 conflicts · 原片未改动
+        </span>
+        <span className="hidden sm:inline">plan 可续做</span>
+      </motion.div>
     </>
   )
 }
@@ -151,9 +160,9 @@ export function Organize() {
     <section id="organize" ref={ref} className="relative h-[380vh]">
       <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-6 px-4 pt-14 sm:px-6 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <Eyebrow index="01">INGEST · 原片整理</Eyebrow>
-            <h2 className="mt-4 font-serif text-[clamp(1.75rem,4vw,3.4rem)] leading-[1.1] font-bold text-balance">
+            <h2 className="mt-4 font-serif text-[clamp(1.75rem,3.6vw,3.2rem)] leading-[1.1] font-bold text-balance">
               把原片交进来，
               <br />
               把秩序带回去。
@@ -193,7 +202,7 @@ export function Organize() {
             </ol>
           </div>
 
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-7">
             <div className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-[#0b0c12] shadow-2xl shadow-black/60">
               <div className="flex items-center justify-between border-b border-white/[0.06] px-3 py-2 font-mono text-[10px] text-dim sm:text-[11px]">
                 <span className="truncate">
@@ -201,7 +210,7 @@ export function Organize() {
                 </span>
                 <span className="hidden shrink-0 sm:inline">186 files · 3 dup merged</span>
               </div>
-              <div className="relative aspect-[16/11] w-full">
+              <div className="relative aspect-[16/9.5] w-full">
                 <div
                   className="absolute inset-0 opacity-40"
                   style={{

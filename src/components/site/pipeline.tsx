@@ -168,7 +168,7 @@ export function Pipeline() {
   const jumpTo = (i: number) => {
     const el = ref.current
     if (!el) return
-    const top = el.offsetTop + ((i + 0.5) / stages.length) * (el.offsetHeight - window.innerHeight)
+    const top = el.getBoundingClientRect().top + window.scrollY + ((i + 0.5) / stages.length) * (el.offsetHeight - window.innerHeight)
     window.scrollTo({ top, behavior: "smooth" })
   }
 
@@ -276,7 +276,7 @@ export function Pipeline() {
                     <span
                       key={i}
                       className="absolute top-0 h-full border-l border-white/10"
-                      style={{ left: `${(i / 18) * 100}%` }}
+                      style={{ left: `${((i / 18) * 100).toFixed(3)}%` }}
                     >
                       {i % 3 === 0 && i < 18 && <span className="ml-1 hidden sm:inline">{`00:${String(i * 5).padStart(2, "0")}`}</span>}
                     </span>
@@ -331,7 +331,7 @@ export function Pipeline() {
                         "flex-1 rounded-full",
                         i / wave.length < (active + 1) / stages.length ? "bg-lime/70" : "bg-lime/25"
                       )}
-                      style={{ height: `${h * 85}%` }}
+                      style={{ height: `${(h * 85).toFixed(2)}%` }}
                     />
                   ))}
                 </div>
@@ -347,7 +347,7 @@ export function Pipeline() {
                     <span
                       key={i}
                       className="absolute top-1.5 bottom-1.5 rounded-sm bg-amber-200/30"
-                      style={{ left: `${3 + i * 6}%`, width: `${3 + rand(i + 9) * 2.4}%` }}
+                      style={{ left: `${3 + i * 6}%`, width: `${(3 + rand(i + 9) * 2.4).toFixed(2)}%` }}
                     />
                   ))}
                 </div>

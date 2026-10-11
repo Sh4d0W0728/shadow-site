@@ -137,7 +137,9 @@ export function Domains() {
             <SectionTitle className="mt-5">
               同样是剪辑，
               <br />
-              每种片子都有自己的逻辑。
+              每种片子
+              <br className="hidden lg:block" />
+              都有自己的逻辑。
             </SectionTitle>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-md leading-relaxed text-dim">

@@ -20,8 +20,8 @@ const credits = [
 export function Footer() {
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end end"] })
-  const fade = useTransform(scrollYProgress, [0.35, 1], [1, 0.25])
-  const spacing = useTransform(scrollYProgress, [0.2, 1], ["-0.02em", "0.12em"])
+  const fade = useTransform(scrollYProgress, [0.4, 1], [0.2, 1])
+  const spacing = useTransform(scrollYProgress, [0.4, 1], ["0.25em", "0em"])
 
   return (
     <footer ref={ref} className="relative overflow-hidden px-4 pt-28 pb-10 sm:px-6">
@@ -79,7 +79,7 @@ export function Footer() {
 
         <motion.div
           style={{ opacity: fade, letterSpacing: spacing }}
-          className="text-outline mt-24 text-center text-[clamp(4rem,17vw,15rem)] leading-none font-bold whitespace-nowrap select-none"
+          className="mt-24 bg-gradient-to-b from-cream/30 via-cream/10 to-transparent bg-clip-text text-center text-[clamp(3.5rem,15vw,13rem)] leading-none font-bold tracking-tight whitespace-nowrap text-transparent select-none"
           aria-hidden
         >
           FADE OUT

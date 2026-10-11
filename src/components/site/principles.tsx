@@ -52,7 +52,11 @@ export function Principles() {
           <Eyebrow index="06" className="justify-center">
             PRINCIPLES · 不冒充
           </Eyebrow>
-          <SectionTitle className="mt-5">它不会假装看过你的素材。</SectionTitle>
+          <SectionTitle className="mt-5">
+            它不会假装
+            <br />
+            看过你的素材。
+          </SectionTitle>
           <Reveal delay={0.1}>
             <p className="mt-6 leading-relaxed text-dim">
               好的剪辑师从不糊弄画面。shadow 把“没做到的就说没做到”写进了每一个流程，给出实际完成范围，也列出仍需你用审美判断的地方。

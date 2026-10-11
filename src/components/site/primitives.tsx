@@ -58,7 +58,7 @@ export function SectionTitle({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.9, ease: [0.2, 0.7, 0.2, 1] }}
       className={cn(
-        "font-serif text-[clamp(2rem,5.2vw,4.25rem)] leading-[1.08] font-bold tracking-tight text-balance text-cream",
+        "font-serif text-[clamp(2rem,4.4vw,3.6rem)] leading-[1.08] font-bold tracking-tight text-balance text-cream",
         className
       )}
     >

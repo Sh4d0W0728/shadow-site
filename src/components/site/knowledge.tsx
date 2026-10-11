@@ -61,7 +61,7 @@ function Analyzer() {
             <span
               key={c}
               className="absolute top-0 h-full w-[2px] bg-amber-200/80"
-              style={{ left: `${(c / 64) * 100}%` }}
+              style={{ left: `${((c / 64) * 100).toFixed(2)}%` }}
             />
           ))}
         </div>
@@ -78,7 +78,7 @@ function Analyzer() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 + i * 0.008, duration: 0.4 }}
               className={cn("flex-1 origin-bottom rounded-t-[1px]", v < 0.1 ? "bg-violet" : "bg-lime/60")}
-              style={{ height: `${v * 100}%` }}
+              style={{ height: `${(v * 100).toFixed(2)}%` }}
             />
           ))}
         </div>
