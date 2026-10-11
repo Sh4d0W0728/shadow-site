@@ -205,7 +205,7 @@ export function Hero() {
         href="#install"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.4, duration: 0.7 }}
+        transition={{ delay: 0.8, duration: 0.7 }}
         className="group mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] py-1 pr-3 pl-1 text-xs text-dim backdrop-blur transition-colors hover:border-violet/40 hover:text-cream"
       >
         <span className="rounded-full bg-violet/15 px-2 py-0.5 font-mono text-[10px] text-violet">
@@ -227,7 +227,7 @@ export function Hero() {
             className="inline-block"
             initial={{ opacity: 0, y: "0.35em", filter: "blur(12px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ delay: 1.7 + i * 0.07, duration: 0.9, ease: [0.2, 0.7, 0.2, 1] }}
+            transition={{ delay: 0.1 + i * 0.07, duration: 0.9, ease: [0.2, 0.7, 0.2, 1] }}
           >
             {l}
           </motion.span>
@@ -237,7 +237,7 @@ export function Hero() {
           className="inline-block text-violet"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 2.35, type: "spring", stiffness: 300, damping: 14 }}
+          transition={{ delay: 0.75, type: "spring", stiffness: 300, damping: 14 }}
         >
           .
         </motion.span>
@@ -246,7 +246,7 @@ export function Hero() {
       <motion.p
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.5, duration: 0.9 }}
+        transition={{ delay: 0.9, duration: 0.9 }}
         className="mt-8 text-center font-serif text-[clamp(1.6rem,4.4vw,3.2rem)] font-bold tracking-[0.06em] text-cream"
       >
         让素材，成为故事。
@@ -254,7 +254,7 @@ export function Hero() {
       <motion.p
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.62, duration: 0.9 }}
+        transition={{ delay: 1.02, duration: 0.9 }}
         className="mt-4 max-w-xl text-center text-[15px] leading-relaxed text-dim sm:text-base"
       >
         一个让 Codex 真正“看过素材再动刀”的剪辑 skill。
@@ -265,7 +265,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.75, duration: 0.9 }}
+        transition={{ delay: 1.15, duration: 0.9 }}
         className="mt-9 flex w-full max-w-md flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:items-center"
       >
         <a
@@ -295,7 +295,7 @@ export function Hero() {
       <motion.dl
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.9, duration: 1 }}
+        transition={{ delay: 1.3, duration: 1 }}
         className="mt-14 grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.07] sm:grid-cols-4"
       >
         {stats.map((s) => (
@@ -313,7 +313,7 @@ export function Hero() {
         href="#organize"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.4 }}
+        transition={{ delay: 1.8 }}
         className="mt-10 flex flex-col items-center gap-2 font-mono text-[10px] tracking-[0.3em] text-dim hover:text-cream"
       >
         SCROLL TO PLAY

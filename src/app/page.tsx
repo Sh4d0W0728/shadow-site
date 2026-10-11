@@ -4,7 +4,6 @@ import { FilmStrip } from "@/components/site/film-strip"
 import { Footer } from "@/components/site/footer"
 import { Hero } from "@/components/site/hero"
 import { Install } from "@/components/site/install"
-import { Intro } from "@/components/site/intro"
 import { Knowledge } from "@/components/site/knowledge"
 import { Nav } from "@/components/site/nav"
 import { Organize } from "@/components/site/organize"
@@ -15,7 +14,6 @@ import { Statement } from "@/components/site/statement"
 export default function Home() {
   return (
     <>
-      <Intro />
       <Nav />
       <main>
         <Hero />

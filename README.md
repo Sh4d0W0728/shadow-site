@@ -1,12 +1,11 @@
 # shadow — 宣传网页
 
-[shadow](https://github.com/Sh4d0W0728/shadow) 是一个面向 Codex 与 Premiere Pro 的影视剪辑 skill。这个仓库是它的宣传网页：把页面本身做成“一部片子”——片头倒计时开幕、取景器 Hero、随滚动归档的原片、Premiere 风格时间线、可交互的领域路由和 Codex 会话演示。
+[shadow](https://github.com/Sh4d0W0728/shadow) 是一个面向 Codex 与 Premiere Pro 的影视剪辑 skill。这个仓库是它的宣传网页：把页面本身做成“一部片子”——取景器 Hero、随滚动归档的原片、Premiere 风格时间线、可交互的领域路由和 Codex 会话演示。
 
 ## 页面结构
 
 | 段落 | 内容 |
 | :--- | :--- |
-| 片头 | 胶片倒计时 3·2·1，黑边开幕（可点击跳过，尊重“减少动态效果”设置） |
 | Hero | 巨型 `shadow.` 字标随光源投下长影；鼠标移动即光源，无鼠标时自动环绕 |
 | 宣言 | 随滚动逐字点亮 |
 | 01 原片整理 | 滚动驱动：散乱素材 → 扫描识别 → 分类编号 → SHA-256 核验 |
