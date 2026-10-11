@@ -47,7 +47,7 @@ export function Install() {
     <section id="install" className="relative px-4 py-28 sm:px-6 sm:py-36">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <Eyebrow index="07">INSTALL · 快速开始</Eyebrow>
             <SectionTitle className="mt-5">
               下载、解压、
@@ -70,7 +70,7 @@ export function Install() {
             </Reveal>
           </div>
 
-          <div className="space-y-6 lg:col-span-7">
+          <div className="min-w-0 space-y-6 lg:col-span-7">
             <ol className="grid gap-3 sm:grid-cols-3">
               {steps.map((s, i) => (
                 <Reveal key={s.n} delay={i * 0.08}>

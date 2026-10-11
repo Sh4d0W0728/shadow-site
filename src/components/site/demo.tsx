@@ -86,7 +86,7 @@ export function Demo() {
         style={{ background: "radial-gradient(50% 40% at 70% 50%, rgba(124,107,242,0.12), transparent 70%)" }}
       />
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:gap-14">
-        <div className="lg:col-span-5">
+        <div className="min-w-0 lg:col-span-5">
           <Eyebrow index="04">DEMO · 在 Codex 里</Eyebrow>
           <SectionTitle className="mt-5">
             一句话，
@@ -122,7 +122,7 @@ export function Demo() {
           </div>
         </div>
 
-        <Reveal delay={0.1} className="lg:col-span-7">
+        <Reveal delay={0.1} className="min-w-0 lg:col-span-7">
           <div
             ref={boxRef}
             className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0b10]/95 shadow-[0_40px_120px_-30px_rgba(124,107,242,0.45)]"

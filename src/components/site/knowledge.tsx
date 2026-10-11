@@ -92,7 +92,7 @@ export function Knowledge() {
     <section className="relative px-4 py-28 sm:px-6 sm:py-36">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-6">
+          <div className="min-w-0 lg:col-span-6">
             <Eyebrow index="05">CRAFT · 方法库</Eyebrow>
             <SectionTitle className="mt-5">
               从公开教学，
@@ -130,7 +130,7 @@ export function Knowledge() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 lg:pt-24">
+          <div className="min-w-0 lg:col-span-6 lg:pt-24">
             <Reveal>
               <h3 className="font-serif text-2xl font-bold sm:text-3xl">从高播放成片，学到可以落地的剪法。</h3>
               <p className="mt-3 text-sm leading-relaxed text-dim">

@@ -160,7 +160,7 @@ export function Organize() {
     <section id="organize" ref={ref} className="relative h-[380vh]">
       <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-6 px-4 pt-14 sm:px-6 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <Eyebrow index="01">INGEST · 原片整理</Eyebrow>
             <h2 className="mt-4 font-serif text-[clamp(1.75rem,3.6vw,3.2rem)] leading-[1.1] font-bold text-balance">
               把原片交进来，
@@ -202,7 +202,7 @@ export function Organize() {
             </ol>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <div className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-[#0b0c12] shadow-2xl shadow-black/60">
               <div className="flex items-center justify-between border-b border-white/[0.06] px-3 py-2 font-mono text-[10px] text-dim sm:text-[11px]">
                 <span className="truncate">

@@ -132,13 +132,13 @@ export function Domains() {
     <section id="domains" className="relative px-4 py-28 sm:px-6 sm:py-36">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <Eyebrow index="03">DOMAINS · 20 个细分领域</Eyebrow>
             <SectionTitle className="mt-5">
               同样是剪辑，
               <br />
               每种片子
-              <br className="hidden lg:block" />
+              <br />
               都有自己的逻辑。
             </SectionTitle>
             <Reveal delay={0.1}>
@@ -148,7 +148,7 @@ export function Domains() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.15} className="lg:col-span-7">
+          <Reveal delay={0.15} className="min-w-0 lg:col-span-7">
             <div className="rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-4 sm:p-6">
               <div className="mb-3 flex items-center justify-between font-mono text-[11px] text-dim">
                 <span>
