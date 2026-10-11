@@ -8,7 +8,7 @@ import { DOWNLOAD_URL, INSTALL_CMD, stats, VERSION } from "@/lib/content"
 import { cn } from "@/lib/utils"
 import { copyText, formatTimecode } from "./primitives"
 
-const LAYERS = 34
+const LAYERS = 24
 
 function buildShadow(ux: number, uy: number, length: number) {
   const step = length / LAYERS
